@@ -1,29 +1,33 @@
 public class player {
 
-    int id;
-    static int wallet = 1500;
-    static int location = 0;
-    static boolean inJail = false;
-    static int jailCounter = 0;
+    private int id;
+    private int wallet;
+    private int location;
+    private boolean inJail;
+    private int jailCounter;
 
-    player(int id){
+    public player(int id){
         this.id = id;
+        this.wallet = 1500;
+        this.location = 0;
+        this.inJail = false;
+        this.jailCounter = 0;
     }
 
-    public static void addMoney(int amount){
+    public void addMoney(int amount){
         wallet += amount;
     }
 
-    public static void spendMoney(int amount){
+    public void spendMoney(int amount){
         wallet -= amount;
     }
 
-    public static int getWallet(){
+    public int getWallet(){
         return wallet;
     }
 
-    public static void move(int steps){
-        location += steps;
+    public void move(int steps){
+        location = location + steps;
         if (location == 30){
             inJail = true;
         }
@@ -33,23 +37,24 @@ public class player {
         }
     }
 
-    public static int getLocation(){
+    public int getLocation(){
         return location;
     }
 
-    public static void resetLocation(){
+    public void resetLocation(){
         location -= 40;
     }
 
-    public static boolean checkJail(){
+    public boolean checkJail(){
         return inJail;
     }
 
-    public static int getJailCounter(){
+    public int getJailCounter(){
         return jailCounter;
     }
 
-    public static void addJail(){
+    public void addJail(){
         jailCounter++;
     }
+
 }
