@@ -18,5 +18,7 @@ public class main {
         System.out.println(player0.getWallet());
         System.out.println(player0.getLocation());
 
+
+        System.out.println("hello world");
     }
 }
