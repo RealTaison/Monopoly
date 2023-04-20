@@ -1,22 +1,31 @@
 public class main {
 
-    public static void main (String args[]){
+    public static void main(String[] args){
 
         int playerCount = 3;
         int round = 0;
 
-        //total rounds of game
-        while (round<100){
-            //every round of game
-            for (int i = 0; i < playerCount; i++) {
+        dice dice1 = new dice();
+        dice dice2 = new dice();
 
-            }
+        player [] playerList = new player [playerCount];
+
+        for (int i = 0; i < playerCount; i++) {
+            playerList[i] = new player(i);
         }
 
-        player player0 = new player(0);
-        player0.move(41);
-        System.out.println(player0.getWallet());
-        System.out.println(player0.getLocation());
+        while (round<1){
+            //loop every player
+            for (int i = 0; i < playerCount; i++) {
+                playerList[i].move(dice1.roll()+dice2.roll());
+            }
+            round++;
+        }
+
+
+        System.out.println(playerList[0].getLocation());
+        System.out.println(playerList[1].getLocation());
+        System.out.println(playerList[2].getLocation());
 
 
 
