@@ -9,6 +9,16 @@ public class main {
         dice dice2 = new dice();
 
         player [] playerList = new player [playerCount];
+        location [] map = new location[39];
+        for (int i = 0; i < 40; i++) {
+            switch (i){
+                case 1:
+                    //map[i] = new location(i,1, 1000);
+                    break;
+                default:
+                    //map[i] = new location(i,5,0);
+            }
+        }
 
         for (int i = 0; i < playerCount; i++) {
             playerList[i] = new player(i);
@@ -18,14 +28,13 @@ public class main {
             //loop every player
             for (int i = 0; i < playerCount; i++) {
                 playerList[i].move(dice1.roll()+dice2.roll());
+                //user input
+
             }
             round++;
         }
 
 
-        System.out.println(playerList[0].getLocation());
-        System.out.println(playerList[1].getLocation());
-        System.out.println(playerList[2].getLocation());
 
 
 
