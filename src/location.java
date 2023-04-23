@@ -15,27 +15,10 @@ public class location {
         this.price = price;
     }
 
-    public String getName(){
-        return name;
-    }
-
     public void transfer(int owner){
         ownership = owner;
     }
 
-    public int getPrice(){
-        return price;
-    }
+    location chekLapKok = new location("Chek Lap Kok",1, 1, 60);
 
-    public int getOwnership(){
-        return ownership;
-    }
-
-    public int getType(){
-        return type;
-    }
-
-    public int getId(){
-        return id;
-    }
 }
