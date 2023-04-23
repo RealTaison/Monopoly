@@ -15,6 +15,8 @@ public class location {
         this.price = price;
     }
 
+    public String getName(){return name;}
+
     public void transfer(int owner){
         ownership = owner;
     }
